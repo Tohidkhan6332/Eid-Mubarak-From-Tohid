@@ -505,4 +505,33 @@
         function showMessage(buttonNumber) {
             // Hide all messages first
             for (let i = 1; i <= 10; i++) {
-                document.getElementById('message' + i</html>
+                document.getElementById('message' + i).style.display = 'none';
+            }
+            
+            // Show the selected message
+            document.getElementById('message' + buttonNumber).style.display = 'block';
+            
+            // Scroll to the message
+            document.getElementById('message' + buttonNumber).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Share on WhatsApp function
+        function shareOnWhatsApp() {
+            const message = "Eid Mubarak to you and your family from Tohid Khan! May Allah bless you with happiness, peace, and prosperity. Check out these beautiful Eid greetings: " + window.location.href;
+            const encodedMessage = encodeURIComponent(message);
+            window.open("https://wa.me/917849917350?text=" + encodedMessage, '_blank');
+        }
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Show random message on page load
+        window.onload = function() {
+            const randomMessage = Math.floor(Math.random() * 10) + 1;
+            showMessage(randomMessage);
+        };
+    </script>
+</body>
+</html>
