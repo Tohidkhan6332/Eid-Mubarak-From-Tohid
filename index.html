@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eid Mubarak Greetings from Tohid Khan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #1a5a12;
+            --secondary-color: #f8e8c8;
+            --accent-color: #d4af37;
+            --text-color: #333;
+            --light-text: #f5f5f5;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f5e9;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.unsplash.com/photo-1604442359686-5a72d85a9a8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border: 1px solid var(--accent-color);
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            font-weight: 700;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color), var(--primary-color));
+            border-radius: 3px;
+        }
+        
+        .personal-greeting {
+            text-align: center;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .countdown-container {
+            background: linear-gradient(135deg, var(--primary-color), #2a7221);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .countdown-title {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .countdown-item {
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 10px 15px;
+            min-width: 70px;
+        }
+        
+        .countdown-number {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .countdown-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .poem {
+            font-style: italic;
+            line-height: 1.8;
+            text-align: center;
+            margin: 40px 0;
+            font-size: 1.2em;
+            color: var(--text-color);
+            padding: 20px;
+            background-color: var(--secondary-color);
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-color);
+        }
+        
+        .prayer-section {
+            margin: 40px 0;
+            padding: 25px;
+            background-color: #f5f9f5;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .prayer {
+            margin-bottom: 30px;
+        }
+        
+        .prayer-arabic {
+            direction: rtl;
+            font-size: 1.5em;
+            font-family: 'Traditional Arabic', 'Arial', sans-serif;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            line-height: 2;
+            text-align: right;
+        }
+        
+        .prayer-translation {
+            font-style: italic;
+            color: #555;
+            border-left: 3px solid var(--accent-color);
+            padding-left: 15px;
+            margin-top: 15px;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 40px 0;
+        }
+        
+        .eid-button {
+            background: linear-gradient(135deg, var(--primary-color), #2a7221);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .eid-button:hover {
+            background: linear-gradient(135deg, #1a5a12, var(--primary-color));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .eid-button:active {
+            transform: translateY(1px);
+        }
+        
+        .whatsapp-button {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        
+        .whatsapp-button:hover {
+            background: linear-gradient(135deg, #128C7E, #25D366);
+        }
+        
+        .message {
+            display: none;
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background-color: #f0f8e6;
+            border-radius: 10px;
+            border-left: 5px solid var(--accent-color);
+            font-size: 1.1em;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+                .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+        
+        .gallery-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            transition: all 0.5s ease;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.1em;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            transform: translateY(0);
+        }
+        
+        .crescent {
+            text-align: center;
+            font-size: 4em;
+            margin: 30px 0;
+            color: var(--accent-color);
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            text-align: center;
+            font-size: 1.8em;
+            margin: 40px 0 20px;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        .lantern {
+            display: inline-block;
+            animation: swing 3s infinite alternate;
+            transform-origin: top center;
+        }
+        
+        @keyframes swing {
+            0% { transform: rotate(-5deg); }
+            100% { transform: rotate(5deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2em;
+            }
+            
+            .button-container {
+                gap: 10px;
+            }
+            
+            .eid-button {
+                padding: 12px 18px;
+                font-size: 1em;
+            }
+            
+            .countdown {
+                gap: 10px;
+            }
+            
+            .countdown-item {
+                min-width: 60px;
+                padding: 8px 10px;
+            }
+            
+            .countdown-number {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Eid Mubarak!</h1>
+        
+        <div class="personal-greeting">
+            Warm wishes from Tohid Khan
+        </div>
+        
+        <div class="countdown-container">
+            <div class="countdown-title">
+                <i class="fas fa-clock"></i> Countdown to Eid al-Fitr
+            </div>
+            <div class="countdown" id="eidCountdown">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="crescent">
+            <span class="lantern">❤️</span> 🌙 <span class="lantern">❤️</span>
+        </div>
+        
+        <div class="poem">
+            <p>As the silver moon shines bright,<br>
+            And the stars adorn the night,<br>
+            Hearts rejoice in Allah's light,<br>
+            Eid Mubarak to you, my delight!</p>
+            
+            <p>The month of mercy has passed away,<br>
+            But its blessings are here to stay,<br>
+            May Allah accept all that we pray,<br>
+            And guide us on the righteous way.</p>
+        </div>
+        
+        <h2 class="section-title">Eid Greetings</h2>
+        
+        <div class="button-container">
+            <button class="eid-button" onclick="showMessage(1)"><i class="fas fa-hands-praying"></i> Blessings</button>
+            <button class="eid-button" onclick="showMessage(2)"><i class="fas fa-laugh-beam"></i> Joy</button>
+            <button class="eid-button" onclick="showMessage(3)"><i class="fas fa-mosque"></i> Greetings</button>
+            <button class="eid-button" onclick="showMessage(4)"><i class="fas fa-pray"></i> Prayers</button>
+            <button class="eid-button" onclick="showMessage(5)"><i class="fas fa-candy-cane"></i> Sweet Wishes</button>
+            <button class="eid-button" onclick="showMessage(6)"><i class="fas fa-star"></i> Happy Eid</button>
+            <button class="eid-button" onclick="showMessage(7)"><i class="fas fa-home"></i> Family</button>
+            <button class="eid-button" onclick="showMessage(8)"><i class="fas fa-peace"></i> Peace</button>
+            <button class="eid-button" onclick="showMessage(9)"><i class="fas fa-moon"></i> Eid Mubarak</button>
+            <button class="eid-button" onclick="showMessage(10)"><i class="fas fa-hands"></i> Special Duas</button>
+            <button class="eid-button whatsapp-button" onclick="THANKS()"><i class="fab fa-whatsapp"></i> Share on WhatsApp</button>
+        </div>
+        
+        <div id="message1" class="message">
+            <i class="fas fa-hands-praying" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            May Allah's blessings shine upon you and your family this Eid and always. May He grant you health, happiness, and prosperity in this life and the hereafter. Eid Mubarak!
+        </div>
+        
+        <div id="message2" class="message">
+            <i class="fas fa-laugh-beam" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            Wishing you a day filled with laughter, happiness, and the love of family. May this Eid bring countless reasons for you to smile and cherish every moment. Eid Mubarak dear friend!
+        </div>
+        
+        <div id="message3" class="message">
+            <i class="fas fa-mosque" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            As we celebrate this blessed day, may Allah accept all our prayers and forgive our sins. May He grant us the strength to continue our good deeds beyond Ramadan. Eid Mubarak!
+        </div>
+        
+        <div id="message4" class="message">
+            <i class="fas fa-pray" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            My prayers that Allah brings you and your family peace, joy, and prosperity. May He answer all your duas and protect you from all harm. Have a blessed Eid!
+        </div>
+        
+        <div id="message5" class="message">
+            <i class="fas fa-candy-cane" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            May the magic of this Eid bring lots of happiness in your life! May you enjoy the sweetest moments with your loved ones and create beautiful memories. Eid Mubarak with sweet wishes!
+        </div>
+        
+        <div id="message6" class="message">
+            <i class="fas fa-star" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            Happy Eid to you and your family! May this special day bring peace, happiness, and prosperity to everyone. May Allah's light illuminate your path always.
+        </div>
+        
+        <div id="message7" class="message">
+            <i class="fas fa-home" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            On this joyous occasion, may Allah bless your family with togetherness and bliss. May your home be filled with love, laughter, and divine blessings. Eid Mubarak!
+        </div>
+        
+        <div id="message8" class="message">
+            <i class="fas fa-peace" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            Sending you wishes of peace, love, and happiness this Eid. May Allah's blessings be with you always, guiding you through life's journey with faith and contentment.
+        </div>
+        
+        <div id="message9" class="message">
+            <i class="fas fa-moon" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            Eid Mubarak! May the divine blessings of Allah bring you hope, faith, and joy on this Eid and forever. May the crescent moon brighten your path to success and happiness.
+        </div>
+        
+        <div id="message10" class="message">
+            <i class="fas fa-hands" style="font-size: 2em; color: var(--primary-color); margin-bottom: 10px;"></i><br>
+            My special duas are with you today. May Allah accept your good deeds, forgive your sins, and ease your suffering. May He grant you the highest place in Jannah. Ameen.
+        </div>
+        
+        <h2 class="section-title">Eid Prayers</h2>
+        
+        <div class="prayer-section">
+            <div class="prayer">
+                <div class="prayer-arabic">
+                    تَقَبَّلَ اللّهُ مِنَّا وَ مِنْكُمْ
+                </div>
+                <div class="prayer-translation">
+                    "May Allah accept [good deeds] from us and from you"
+                </div>
+                <p>The traditional Eid greeting, expressing hope that Allah accepts our fasting and good deeds during Ramadan.</p>
+            </div>
+            
+            <div class="prayer">
+                <div class="prayer-arabic">
+                    اللَّهُمَّ اجْعَلْنَا مِنَ الْعَائِدِينَ وَالْفَائِزِينَ
+                </div>
+                <div class="prayer-translation">
+                    "O Allah, make us among those who return (to obedience) and succeed"
+                </div>
+                <p>A prayer that we continue our good deeds beyond Ramadan and attain success in this life and the hereafter.</p>
+            </div>
+            
+            <div class="prayer">
+                <div class="prayer-arabic">
+                    رَبَّنَا تَقَبَّلْ مِنَّا إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ
+                </div>
+                <div class="prayer-translation">
+                    "Our Lord, accept [this] from us. Indeed You are the Hearing, the Knowing"
+                </div>
+                <p>From Surah Al-Baqarah (2:127), a beautiful prayer for acceptance of our worship.</p>
+            </div>
+            
+            <div class="prayer">
+                <div class="prayer-arabic">
+                    اللَّهُمَّ أَعِزَّ الإِسْلامَ وَالمُسْلِمِينَ
+                </div>
+                <div class="prayer-translation">
+                    "O Allah, honor Islam and the Muslims"
+                </div>
+                <p>A prayer for the dignity and honor of all Muslims around the world.</p>
+            </div>
+        </div>
+        
+                <div class="photo-gallery">
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/nMHDBDH6/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Celebration">
+                <div class="gallery-caption">Eid Mubarak bro😍😍</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/mFBK55wg/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Moon">
+                <div class="gallery-caption">Under the Eid Moon</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/RkckyHhQ/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Decorations">
+                <div class="gallery-caption">Eid Mubarak bro😍😍</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/mrNjFFnd/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Decorations">
+                <div class="gallery-caption">Eid Decorations</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/wh7CSvMk/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Decorations">
+                <div class="gallery-caption">Eid Mubarak bro😍😍</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://i.ibb.co/fdvyv9gm/lordali.jpg=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Eid Food">
+                <div class="gallery-caption">Eid Feast Together</div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="poem">
+            <p>The moon has been sighted, the night is so bright,<br>
+            Houses are cleaned and decorated just right,<br>
+            New clothes are pressed, perfumes are sprayed,<br>
+            As we prepare for the blessed Eid parade.</p>
+            
+            <p>Children are happy with Eidi in hand,<br>
+            Families united, together they stand,<br>
+            Feasts are prepared with love and care,<br>
+            Gratitude to Allah is in the air.</p>
+            
+            <p>Eid is here, let's cheer and pray,<br>
+            For blessings that grow day by day,<br>
+            To all my friends, both far and near,<br>
+            Eid Mubarak and a blessed new year!</p>
+        </div>
+        
+        <footer>
+            <p>Created with love by Tohid Khan to wish you a blessed Eid al-Fitr</p>
+            <p>May Allah accept our fasting, forgive our sins, and guide us to the straight path</p>
+            <p>© <span id="year"></span> Eid Mubarak Greetings | Share the joy of Eid</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Set Eid date (April 10, 2024 - change this to the correct Eid date)
+        const eidDate = new Date('March 31, 2025 00:00:00').getTime();
+        
+        // Update countdown every second
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = eidDate - now;
+            
+            // Time calculations
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display results
+            document.getElementById('days').innerHTML = days.toString().padStart(2, '0');
+            document.getElementById('hours').innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').innerHTML = seconds.toString().padStart(2, '0');
+            
+            // If countdown is finished
+            if (distance < 0) {
+                clearInterval(countdown);
+                document.getElementById('eidCountdown').innerHTML = '<div style="font-size:1.5em;">Eid Mubarak!</div>';
+            }
+        }, 1000);
+        
+        // Show message when button is clicked
+        function showMessage(buttonNumber) {
+            // Hide all messages first
+            for (let i = 1; i <= 10; i++) {
+                document.getElementById('message' + i).style.display = 'none';
+            }
+            
+            // Show the selected message
+            document.getElementById('message' + buttonNumber).style.display = 'block';
+            
+            // Scroll to the message
+            document.getElementById('message' + buttonNumber).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+        
+        // Share on WhatsApp function
+        function Thabks Tohid() {
+            const message = "Eid Mubarak to you and your family brother Tohid Khan! May Allah bless you with happiness, peace, and prosperity. Check out these beautiful Eid greetings: " + window.location.href;
+            const encodedMessage = encodeURIComponent(message);
+            window.open("https://wa.me/917849917350?text=" + encodedMessage, '_blank');
+        }
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Show random message on page load
+        window.onload = function() {
+            const randomMessage = Math.floor(Math.random() * 10) + 1;
+            showMessage(randomMessage);
+        };
+    </script>
+</body>
+</html>
